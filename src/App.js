@@ -10,6 +10,7 @@ function App() {
     <main className="App">
       <h1>Ideabox using React Hooks</h1>
       <Form />
+      <IdeasContainer ideas={ideas.ideas} />
     </main>
   );
 }
