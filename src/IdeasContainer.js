@@ -2,12 +2,12 @@
 import React from 'react'
 import IdeaCard from './IdeaCard'
 
-const IdeaContainer = ({ ideas }) => {
-  const Ideas = ideas.map(idea => <IdeaCard idea={idea} />)
+const IdeaContainer = ({ ideas, deleteIdea }) => {
+  const allIdeas = ideas.map(idea => <IdeaCard idea={idea} deleteIdea={deleteIdea}/>)
 
   return (
     <section>
-      {Ideas}
+      {allIdeas}
     </section>
   )
 }

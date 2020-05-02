@@ -10,11 +10,15 @@ function App() {
     setIdeas({ideas: [...ideas.ideas, idea]});
   }
 
+  const deleteIdea = id => {
+    setIdeas({ideas: ideas.ideas.filter(idea => idea.id !== id)})
+  }
+
   return (
     <main className="App">
       <h1>Ideabox using React Hooks</h1>
       <Form addIdea={addIdea}/>
-      <IdeasContainer ideas={ideas.ideas} />
+      <IdeasContainer ideas={ideas.ideas} deleteIdea={deleteIdea}/>
     </main>
   );
 }
